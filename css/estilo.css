@@ -1,4 +1,73 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/* VARIABLES */
+main .container-fluid {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  main .container-fluid .accordion {
+    width: 80vw;
+    border: 1px solid;
+    /* !PRIMER ACCORDEON */
+    /* !SEGUNDO ACCORDEON */ }
+    main .container-fluid .accordion .accordion-item h2 button {
+      color: whitesmoke;
+      text-shadow: 1px 1px 1px black;
+      height: 10vh; }
+    main .container-fluid .accordion .primer-color h2 button {
+      background-color: #8ecae6; }
+    main .container-fluid .accordion .primer-color .collapse .accordion-body {
+      background-color: rgba(142, 202, 230, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      main .container-fluid .accordion .primer-color .collapse .accordion-body h3 {
+        text-align: center; }
+      main .container-fluid .accordion .primer-color .collapse .accordion-body .img {
+        background-image: url(../assets/controlador.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40vh;
+        width: 100%;
+        margin: 0 auto; }
+      main .container-fluid .accordion .primer-color .collapse .accordion-body p {
+        text-align: justify;
+        font-weight: 500; }
+    main .container-fluid .accordion .segundo-color h2 button {
+      background-color: #d62828; }
+    main .container-fluid .accordion .segundo-color .collapse .accordion-body {
+      background-color: rgba(214, 40, 40, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      main .container-fluid .accordion .segundo-color .collapse .accordion-body h3 {
+        text-align: center; }
+      main .container-fluid .accordion .segundo-color .collapse .accordion-body .img {
+        background-image: url(../assets/huida.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 70% 100%;
+        height: 50vh;
+        width: 50%;
+        margin: 0 auto; }
+      main .container-fluid .accordion .segundo-color .collapse .accordion-body p {
+        text-align: justify;
+        font-weight: 500; }
+    main .container-fluid .accordion .tercer-color h2 button {
+      background-color: #fcbf49; }
+    main .container-fluid .accordion .cuarto-color h2 button {
+      background-color: #03045e; }
+    main .container-fluid .accordion .quinto-color h2 button {
+      background-color: #ef476f; }
+
+.accordion-button::after {
+  background-image: none; }
