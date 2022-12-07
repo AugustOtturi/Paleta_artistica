@@ -7,126 +7,63 @@
 
 /* VARIABLES */
 
-$color1: rgb(142, 202, 230);
-$color2: rgb(214, 40, 40);
+$color1: #8ecae6;
+$color2: #d62828;
 $color3: #fcbf49;
 $color4: #03045e;
 $color5: #ef476f;
-main {
-    .container-fluid {
-        width: 100vw;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        .accordion {
-            width: 80vw;
-            border: 1px solid;
-            .accordion-item{
-                h2{  
-                    button{
-                        color: whitesmoke;
-                        text-shadow: 1px 1px 1px black;
-                        height: 10vh;
-                    }
-                }
-            }
-            /* !PRIMER ACCORDEON */
-            .primer-color {
-                h2 {
-                    button {
-                        background-color: $color1;
-                    }
-                }
-                .collapse{
-                    .accordion-body{
-                        background-color: rgba(142, 202, 230,0.6);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        h3{
-                            text-align: center;
-                            
-                        }
-                        .img{
-                            background-image: url(../assets/controlador.jpg);
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                            height: 40vh;
-                            width: 100%;
-                            margin: 0 auto;
-                        }
-                        p{
-                            text-align: justify;
-                            font-weight: 500;
-                        }
-                    }
-                }
-            }
-            /* !SEGUNDO ACCORDEON */
-            .segundo-color {
-                h2 {
-                    button {
-                        background-color: $color2;
-                    }
-                }
-                .collapse{
-                    .accordion-body{
-                        background-color: rgba(214, 40, 40,0.6);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        h3{
-                            text-align: center;
-                        }
-                        .img{
-                            background-image: url(../assets/huida.jpg);
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-size: 70% 100%;
-                            height: 50vh;
-                            width: 50%;
-                            margin: 0 auto;
-                        }
-                        p{
-                            text-align: justify;
-                            font-weight: 500;
-                        }
-                        
-                    }
-                }
-            }
-            .tercer-color {
-                h2 {
-                    button {
-                        background-color: $color3;
-                    }
-                }
-            }
-            .cuarto-color {
-                h2 {
-                    button {
-                        background-color: $color4;
-
-                    }
-                }
-            }
-            .quinto-color {
-                h2 {
-                    button {
-                        background-color: $color5;
-
-                    }
-                }
-            }
-        }
+$color6: #e952de;
+.row{
+    position: relative;
+}
+.col-2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    p{
+        font-size: 2vw;
+        font-weight: bold;
     }
 }
+.color1{
+    background-color: $color1;
+    &::after{
+        content: "";
+        height: 100%;
+        width: 17%;
+        background-image: url(../assets/huida.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 130% 100%;
+        display: block;
+        position: absolute;
+        transform: scaleX(0);
+        background-color: black;
+        transition: 0.5s all ease;
 
+        
+    }
+    &:hover::after{
+        transform: scaleX(1);
+    }
 
-.accordion-button::after{
-    background-image: none;
+}
+.color2{
+    background-color: $color2;
+}
+.color3{
+    background-color: $color3;
+}
+.color4{
+    background-color: $color4;
+    color: white;
+}
+.color5{
+    background-color: $color5;
+}
+.color6{
+    background-color: $color6;
+    color: white;
 }
