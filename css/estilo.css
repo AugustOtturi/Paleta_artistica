@@ -5,6 +5,9 @@
   box-sizing: border-box; }
 
 /* VARIABLES */
+body {
+  overflow-x: hidden; }
+
 main .container-fluid {
   height: 100vh;
   width: 100vw; }
@@ -13,21 +16,23 @@ main .container-fluid {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     color: whitesmoke;
     font-size: 3vw;
-    cursor: pointer; }
+    cursor: pointer;
+    text-shadow: 1px 1px 2px black; }
     main .container-fluid .row .col-2::after {
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      flex-direction: row;
       font-size: 2vw;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
   main .container-fluid .color-1 {
     background-color: #8ecae6;
     z-index: 3; }
     main .container-fluid .color-1::after {
-      content: "La Huida - Remedios varo";
-      background-color: gainsboro;
+      content: "La Huida  Remedios Varo";
       background-image: url(../assets/huida.jpg);
       background-position: center;
       background-repeat: no-repeat;
@@ -36,16 +41,15 @@ main .container-fluid {
       width: 30%;
       position: absolute;
       left: -40rem;
-      z-index: -1;
+      z-index: 10;
       transition: 1s all ease; }
     main .container-fluid .color-1:hover::after {
       left: 0rem;
-      z-index: 3; }
+      z-index: 1; }
   main .container-fluid .color-2 {
     background-color: #d62828; }
     main .container-fluid .color-2::after {
-      content: "Remedios Varo";
-      background-color: gainsboro;
+      content: "Ruptura  Remedios Varo";
       background-image: url(../assets/Ruptura.jpg);
       background-position: center;
       background-repeat: no-repeat;
@@ -62,9 +66,8 @@ main .container-fluid {
   main .container-fluid .color-3 {
     background-color: #fcbf49; }
     main .container-fluid .color-3::after {
-      content: "María Izquierdo";
-      background-color: gainsboro;
-      background: url(../assets/mariaizq.jpg);
+      content: "Payaso  María Izquierdo";
+      background-image: url(../assets/payaso.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -78,9 +81,9 @@ main .container-fluid {
   main .container-fluid .color-4 {
     background-color: #03045e; }
     main .container-fluid .color-4::after {
-      content: "María Izquierdo";
-      background-color: gainsboro;
-      background: url(../assets/dalli.jpg);
+      text-align: center;
+      content: "El nacimiento de una divinidad  Salvador Dalí";
+      background-image: url(../assets/divinidad.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -92,6 +95,41 @@ main .container-fluid {
     main .container-fluid .color-4:hover::after {
       transform: scaleX(1); }
   main .container-fluid .color-5 {
-    background-color: #ef476f; }
+    background-color: #ef476f;
+    overflow: hidden; }
+    main .container-fluid .color-5::after {
+      text-align: center;
+      content: "Hombre invisible  Salvador Dalí";
+      background-image: url(../assets/invisivble.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      width: 30%;
+      position: absolute;
+      right: -20rem;
+      z-index: -1;
+      transition: 1s all ease;
+      overflow: hidden; }
+    main .container-fluid .color-5:hover::after {
+      right: 16.7%;
+      z-index: 1; }
   main .container-fluid .color-6 {
-    background-color: #e952de; }
+    background-color: #e952de;
+    z-index: 3; }
+    main .container-fluid .color-6::after {
+      text-align: center;
+      content: "Carnaval de la vida mexicana - Diego Rivera";
+      background-image: url(../assets/carnaval.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 100%;
+      width: 30%;
+      position: absolute;
+      right: -40rem;
+      z-index: -1;
+      transition: 1s all ease; }
+    main .container-fluid .color-6:hover::after {
+      right: 0rem;
+      z-index: 3; }
