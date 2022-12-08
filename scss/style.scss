@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* VARIABLES */
@@ -13,57 +12,103 @@ $color3: #fcbf49;
 $color4: #03045e;
 $color5: #ef476f;
 $color6: #e952de;
-.row{
-    position: relative;
-}
-.col-2{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    p{
-        font-size: 2vw;
-        font-weight: bold;
-    }
-}
-.color1{
-    background-color: $color1;
-    &::after{
-        content: "";
-        height: 100%;
-        width: 17%;
-        background-image: url(../assets/huida.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 130% 100%;
-        display: block;
-        position: absolute;
-        transform: scaleX(0);
-        background-color: black;
-        transition: 0.5s all ease;
 
-        
-    }
-    &:hover::after{
-        transform: scaleX(1);
-    }
 
-}
-.color2{
-    background-color: $color2;
-}
-.color3{
-    background-color: $color3;
-}
-.color4{
-    background-color: $color4;
-    color: white;
-}
-.color5{
-    background-color: $color5;
-}
-.color6{
-    background-color: $color6;
-    color: white;
-}
+main{
+    .container-fluid{
+        height: 100vh;
+        width: 100vw;
+        .row{
+            .col-2{
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: whitesmoke;
+                font-size: 3vw;
+                cursor: pointer;
+                &::after{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    font-size: 2vw;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                }
+                }
+            }
+            .color-1{
+                background-color: $color1;
+                z-index: 3;
+                &::after{
+                    content: "La Huida - Remedios varo";
+                    background-color: gainsboro;
+                    background-image: url(../assets/huida.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    height: 100%;
+                    width: 30%;
+                    position: absolute;
+                    left: -40rem;
+                    z-index: -1;
+                    transition: 1s all ease;
+                }
+                &:hover::after{
+                    left: 0rem;
+                    z-index: 3;
+
+                }
+            }
+            .color-2{
+                background-color: $color2;
+                &::after{
+                    content: "Remedios Varo";
+                    background-color: gainsboro;
+                    background-image: url(../assets/Ruptura.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100%;
+                    width: 30%;
+                    position: absolute;
+                    left: -20rem;
+                    z-index: -1;
+                    transition: 1s all ease;
+                }
+                &:hover::after{
+                    left: 16.7%;
+                    z-index: 2;
+
+                }
+            }
+            .color-3{
+                background-color:$color3;
+                &::after{
+                    content: "María Izquierdo";
+                    background-color: gainsboro;
+                    background: url(../assets/mariaizq.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100%;
+                    width: 30%;
+                    position: absolute;
+                    transition: 1s all ease;
+                    transform: scaleX(0);
+                }
+                &:hover::after{
+                transform: scaleX(1);
+                }
+                
+            }
+            .color-4{
+                background-color: $color4;
+            }
+            .color-5{
+                background-color: $color5;
+            }
+            .color-6{
+                background-color: $color6;
+            }
+        }
+    }
