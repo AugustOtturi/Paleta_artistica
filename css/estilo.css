@@ -6,7 +6,7 @@
 
 /* VARIABLES */
 body {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 main .container-fluid {
   height: 100vh;
@@ -74,10 +74,12 @@ main .container-fluid {
       height: 100%;
       width: 30%;
       position: absolute;
-      transition: 1s all ease;
-      transform: scaleX(0); }
+      transition: 1s all linear;
+      bottom: -150%;
+      z-index: 10; }
     main .container-fluid .color-3:hover::after {
-      transform: scaleX(1); }
+      bottom: 0;
+      z-index: 5; }
   main .container-fluid .color-4 {
     background-color: #03045e; }
     main .container-fluid .color-4::after {
@@ -90,10 +92,10 @@ main .container-fluid {
       height: 100%;
       width: 30%;
       position: absolute;
-      transition: 1s all ease;
-      transform: scaleX(0); }
+      transition: 1s all linear;
+      bottom: 150%; }
     main .container-fluid .color-4:hover::after {
-      transform: scaleX(1); }
+      bottom: 0; }
   main .container-fluid .color-5 {
     background-color: #ef476f;
     overflow: hidden; }
@@ -119,7 +121,7 @@ main .container-fluid {
     z-index: 3; }
     main .container-fluid .color-6::after {
       text-align: center;
-      content: "Carnaval de la vida mexicana - Diego Rivera";
+      content: "Carnaval de la vida mexicana  Diego Rivera";
       background-image: url(../assets/carnaval.jpg);
       background-position: center;
       background-repeat: no-repeat;

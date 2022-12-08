@@ -34,7 +34,7 @@ $color6: #e952de;
 
 
 body{
-    overflow-x: hidden;
+    overflow: hidden;
 
 }
 main{
@@ -101,11 +101,13 @@ main{
                     height: 100%;
                     width: 30%;
                     position: absolute;
-                    transition: 1s all ease;
-                    transform: scaleX(0);
+                    transition: 1s all linear;
+                    bottom: -150%;
+                    z-index: 10;
                 }
                 &:hover::after{
-                transform: scaleX(1);
+                bottom: 0;
+                z-index: 5;
                 }
                 
             }
@@ -118,11 +120,11 @@ main{
                     height: 100%;
                     width: 30%;
                     position: absolute;
-                    transition: 1s all ease;
-                    transform: scaleX(0);
+                    transition: 1s all linear;
+                    bottom: 150%;
                 }
                 &:hover::after{
-                transform: scaleX(1);
+                bottom: 0;
                 }
             }
             .color-5{
@@ -151,7 +153,7 @@ main{
                 z-index: 3;
                 &::after{
                     text-align: center;
-                    content: "Carnaval de la vida mexicana - Diego Rivera";
+                    content: "Carnaval de la vida mexicana  Diego Rivera";
                     @include background(url(../assets/carnaval.jpg),center , no-repeat ,100% 100% );
                     height: 100%;
                     width: 30%;
