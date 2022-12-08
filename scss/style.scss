@@ -103,6 +103,22 @@ main{
             }
             .color-4{
                 background-color: $color4;
+                &::after{
+                    content: "María Izquierdo";
+                    background-color: gainsboro;
+                    background: url(../assets/dalli.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 100%;
+                    width: 30%;
+                    position: absolute;
+                    transition: 1s all ease;
+                    transform: scaleX(0);
+                }
+                &:hover::after{
+                transform: scaleX(1);
+                }
             }
             .color-5{
                 background-color: $color5;
